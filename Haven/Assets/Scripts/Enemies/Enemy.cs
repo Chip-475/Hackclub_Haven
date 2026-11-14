@@ -1,25 +1,37 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
+using static UnityEngine.UI.Image;
 
 [DisallowMultipleComponent]
 public class Enemy : MonoBehaviour, IDamageable
 {
     [SerializeField] EnemyData data;
-    bool isDead;
 
-    public float MaxHealth { get; private set; }
-    public float Health { get; private set; }
-    public float AttackDamage { get; private set; }
-    public float Defense { get; private set; }
-    public float Speed { get; private set; }
+    [Header("Stats")]
+    [SerializeField] float maxHealth;
+    [SerializeField] float health;
+    [SerializeField] float attackDamage;
+    [SerializeField] float defense;
+    [SerializeField] float speed;
+    [Space]
+    [SerializeField] float attackRange;
+    [SerializeField] float detectionRange;
+    [SerializeField] float preferredDistanceFromPlayer;
+
+    [Header("Runtime")]
+    [SerializeField] bool isDead;
+    [SerializeField] bool isPlayerInDetectionRange;
+    [SerializeField] bool isDetectingPlayer;
+    [SerializeField] bool canMove = true;
 
     Vector2? destination;
-    bool canMove = true;
 
-    float IDamageable.Health
+    public float DistanceFromPlayer => (PlayerManager.Instance.playerObj.transform.position - transform.position).sqrMagnitude;
+    public float Health
     {
-        get => Health;
-        set => Health = value;
+        get => health;
+        set => health = value;
     }
 
     private void Awake()
@@ -31,16 +43,42 @@ public class Enemy : MonoBehaviour, IDamageable
             return;
         }
 
-        MaxHealth = Mathf.Max(0f, data.maxHp);
-        Health = MaxHealth;
-        AttackDamage = data.atk;
-        Defense = data.def;
-        Speed = data.spd;
+        maxHealth = Mathf.Max(0f, data.maxHp);
+        health = maxHealth;
+        attackDamage = data.atk;
+        defense = data.def;
+        speed = data.spd;
+
+        attackRange = data.attackRange;
+        detectionRange = data.detectionRange;
+        preferredDistanceFromPlayer = data.preferredDistanceFromPlayer;
     }
     private void Update()
     {
-        if (destination != null)
-            MoveTo(destination.Value);
+        isDetectingPlayer = Detect();
+    }
+
+    public bool Detect()
+    {
+        Vector3 origin = transform.position;
+        Vector3 playerPos = PlayerManager.Instance.playerObj.transform.position;
+
+        int ignoreMask = ~(1 << LayerMask.NameToLayer("Enemy"));
+        RaycastHit2D hit = Physics2D.Raycast(
+            origin,
+            playerPos - origin,
+            detectionRange,
+            ignoreMask
+        );
+        bool detected = hit.collider != null && hit.collider.gameObject.layer == LayerMask.NameToLayer("Player");
+
+        Debug.DrawRay(
+            origin,
+            (playerPos - origin).normalized * detectionRange,
+            detected ? Color.green : Color.red
+        );
+
+        return detected;
     }
 
     public void MoveTo(Vector3 coords)
@@ -53,7 +91,7 @@ public class Enemy : MonoBehaviour, IDamageable
             return;
         }
 
-        transform.position = Vector3.MoveTowards(transform.position, coords, Speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, coords, speed * Time.deltaTime);
         if ((coords - transform.position).sqrMagnitude < 0.1f)
             destination = null;
     }
@@ -63,10 +101,10 @@ public class Enemy : MonoBehaviour, IDamageable
         if (isDead || damage <= 0f)
             return;
 
-        Health -= damage;
-        Health = Mathf.Clamp(Health, 0f, MaxHealth);
+        health -= damage;
+        health = Mathf.Clamp(health, 0f, maxHealth);
 
-        if (Health <= 0f)
+        if (health <= 0f)
             Die();
     }
     public void Die()
@@ -75,7 +113,7 @@ public class Enemy : MonoBehaviour, IDamageable
             return;
 
         isDead = true;
-        Health = 0f;
+        health = 0f;
         Destroy(gameObject);
     }
 }
