@@ -1,0 +1,91 @@
+# Unity project .gitignore
+# Place this file at the root of Haven (the folder containing Assets/ and ProjectSettings/).
+
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+[Aa]ssets/[Aa]ssetStoreTools*
+
+# Unity generated/cache files
+*.pidb
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+sysinfo.txt
+mono_crash.*
+*.blend1
+*.blend1.meta
+
+# Unity build outputs / packages
+*.apk
+*.aab
+*.app
+*.unitypackage
+*.unitypackage.meta
+/[Ss]erverData/
+/[Aa]ssets/StreamingAssets/aa*
+/[Aa]ssets/AddressableAssetsData/link.xml*
+/[Aa]ssets/Addressables_Temp*
+/[Aa]ssets/AddressableAssetsData/*/*.bin*
+/[Aa]ssets/Unity.VisualScripting.Generated/
+/UIElementsSchema/
+/[Aa]ssets/[Ss]ceneDependencyCache*
+
+# IDEs and editor-generated project files
+.vs/
+.idea/
+.gradle/
+.consulo/
+ExportedObj/
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.tmp
+*.DotSettings.user
+*.csproj.user
+
+# Rider / Visual Studio caches
+.vscode/
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.cache
+
+# OS junk
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Logs and temporary files
+*.log
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# Crash / diagnostics
+crashlytics-build.properties
+
+# Keep Unity essentials tracked:
+# Assets/ (including .meta files), Packages/manifest.json, Packages/packages-lock.json,
+# ProjectSettings/, and User-authored scripts/scenes/prefabs.
