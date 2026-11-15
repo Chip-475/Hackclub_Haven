@@ -59,6 +59,13 @@ public class PlayerCombat
         onCd = false;
     }
 
+    public void CancelAttack()
+    {
+        IsAttacking=false; onCd=false;
+        if(hitCollider!=null) hitCollider.enabled=false;
+        enemiesInHitbox.Clear();
+    }
+
     void TryHit()
     {
         if (!hitCollider.enabled)

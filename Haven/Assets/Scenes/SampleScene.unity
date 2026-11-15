@@ -127,6 +127,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+  - component: {fileID: 4000000000}
   - component: {fileID: 333471205}
   - component: {fileID: 333471204}
   m_Layer: 0
@@ -15340,6 +15341,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &4000000000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333471203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ad0b6110344cbe8417e821775edbd2, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::GameplayDirector
+  explorationMusic: {fileID: 8300000, guid: 367bdc2cb1954c04aa3a0dc2dfa23d6d, type: 3}
+  bossMusic: {fileID: 8300000, guid: e5e8c28e98989c542bf3d2ccfb48bd81, type: 3}
+  arenaBackdrop: {fileID: 9057914980909255238, guid: c6baa4ea938c83449aad1cb71fc68919, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
