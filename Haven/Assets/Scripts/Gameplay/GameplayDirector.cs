@@ -8,7 +8,7 @@ public class GameplayDirector : MonoBehaviour
     public Sprite arenaBackdrop;
     public bool IsBouncing { get; private set; }
     public float Shake { get; private set; }
-    public Vector3 RespawnPoint { get; private set; } = new Vector3(0,-2.95f,0);
+    public Vector3 RespawnPoint { get; private set; } = new Vector3(-5,-2.95f,0);
     float darkness, flash, previousScale=1;
     Vector2 orb;
     bool showOrb, bossStarted;
@@ -37,14 +37,11 @@ public class GameplayDirector : MonoBehaviour
     }
     void Update()
     {
-        flash=Mathf.MoveTowards(flash,0,Time.unscaledDeltaTime*3);
+        flash=Mathf.MoveTowards(flash,0,Time.unscaledDeltaTime*9);
         Shake=Mathf.MoveTowards(Shake,0,Time.unscaledDeltaTime*.7f);
         var player=PlayerManager.Instance;
         if(player==null || IsBouncing) return;
         float x=player.playerObj.transform.position.x;
-        if(x>32) RespawnPoint=new Vector3(33,-2.95f,0);
-        else if(x>12) RespawnPoint=new Vector3(12,-2.95f,0);
-        else RespawnPoint=new Vector3(0,-2.95f,0);
         if(!bossStarted && x>32)
         {
             bossStarted=true;
@@ -53,7 +50,7 @@ public class GameplayDirector : MonoBehaviour
         }
         if(player.playerObj.transform.position.y<-12) player.Die();
     }
-    public void Impact() { if(IsBouncing) return; flash=.16f; Shake=.06f; AudioManager.Instance?.Impact(); }
+    public void Impact() { if(IsBouncing) return; flash=.9f; Shake=.08f; AudioManager.Instance?.Impact(); }
     public void Bounceback(PlayerManager player) { if(!IsBouncing) StartCoroutine(Respawn(player)); }
     IEnumerator Respawn(PlayerManager player)
     {
@@ -66,18 +63,32 @@ public class GameplayDirector : MonoBehaviour
         var renders=player.playerObj.GetComponentsInChildren<SpriteRenderer>();
         bool[] visible=new bool[renders.Length];
         for(int i=0;i<renders.Length;i++) { visible[i]=renders[i].enabled; renders[i].enabled=false; }
-        Vector2 start=orb; int lastBounce=-1;
-        for(float t=0;t<1.5f;t+=Time.unscaledDeltaTime)
+        Vector3 start=player.playerObj.transform.position;
+        Vector3 cameraStart=camera.transform.position;
+        float startingZoom=camera.orthographicSize;
+        int bounces=Mathf.Max(2,Mathf.CeilToInt(Vector2.Distance(start,RespawnPoint)/5f));
+        float duration=bounces*.48f;
+        int lastBounce=-1;
+        for(float t=0;t<duration;t+=Time.unscaledDeltaTime)
         {
-            float u=t/1.5f; orb=Vector2.Lerp(start,new Vector2(.5f,.5f),u);
-            orb.y-=Mathf.Abs(Mathf.Sin(u*Mathf.PI*3))*.23f*(1-u);
-            int bounce=(int)(u*3); if(bounce!=lastBounce) { AudioManager.Instance?.Bounce(); lastBounce=bounce; }
+            float u=Mathf.Clamp01(t/duration);
+            float travel=Mathf.SmoothStep(0,1,u);
+            Vector3 ball=Vector3.Lerp(start,RespawnPoint,travel);
+            ball.y+=Mathf.Abs(Mathf.Sin(u*Mathf.PI*bounces))*.9f;
+            Vector3 baseline=Vector3.Lerp(start,RespawnPoint,travel);
+            Vector3 follow=new Vector3(baseline.x,baseline.y,cameraStart.z);
+            camera.transform.position=Vector3.Lerp(cameraStart,follow,Mathf.SmoothStep(0,1,Mathf.Min(u*4,1)));
+            camera.orthographicSize=Mathf.Lerp(startingZoom,5,travel);
+            Vector3 screen=camera.WorldToViewportPoint(ball);
+            orb=new Vector2(screen.x,1-screen.y);
+            int bounce=(int)(u*bounces);
+            if(bounce!=lastBounce) { AudioManager.Instance?.Bounce(); lastBounce=bounce; }
             yield return null;
         }
         orb=new Vector2(.5f,.5f);
-        yield return new WaitForSecondsRealtime(.08f);
+        camera.transform.position=new Vector3(RespawnPoint.x,RespawnPoint.y,cameraStart.z);
+        camera.orthographicSize=5;
         player.RestoreAfterDeath(RespawnPoint);
-        camera.transform.position=new Vector3(RespawnPoint.x,RespawnPoint.y,camera.transform.position.z);
         for(int i=0;i<renders.Length;i++) renders[i].enabled=visible[i];
         showOrb=false;
         for(float t=0;t<.4f;t+=Time.unscaledDeltaTime) { darkness=1-t/.4f; yield return null; }
@@ -89,7 +100,7 @@ public class GameplayDirector : MonoBehaviour
         GUI.depth=-100; Color old=GUI.color;
         if(darkness>0) { GUI.color=new Color(0,0,0,darkness); GUI.DrawTexture(new Rect(0,0,Screen.width,Screen.height),Texture2D.whiteTexture); }
         if(showOrb && circle!=null) { GUI.color=Color.white; float size=Screen.height*.035f; GUI.DrawTexture(new Rect(orb.x*Screen.width-size/2,orb.y*Screen.height-size/2,size,size),circle); }
-        if(flash>0 && !IsBouncing) { GUI.color=new Color(1,.94f,.85f,flash); GUI.DrawTexture(new Rect(0,0,Screen.width,Screen.height),Texture2D.whiteTexture); }
+        if(flash>0 && !IsBouncing) { GUI.color=new Color(1,1,1,flash); GUI.DrawTexture(new Rect(0,0,Screen.width,Screen.height),Texture2D.whiteTexture); }
         GUI.color=old;
     }
     void OnDestroy() { if(IsBouncing) Time.timeScale=previousScale; if(Instance==this) Instance=null; Destroy(circle); }

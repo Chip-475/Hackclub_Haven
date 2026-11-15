@@ -38,6 +38,7 @@ public class Enemy : MonoBehaviour, IDamageable
         ? Vector2.Distance(Player.transform.position, transform.position)
         : float.PositiveInfinity;
 
+    public float MaxHealth => maxHealth;
     public float Health => health;
     public float Defense => defense;
 
@@ -63,6 +64,7 @@ public class Enemy : MonoBehaviour, IDamageable
         if (animator == null)
             animator = GetComponentInChildren<Animator>();
         Animations = new(this);
+        gameObject.AddComponent<EnemyPresentation>();
     }
     protected virtual void Update()
     {
