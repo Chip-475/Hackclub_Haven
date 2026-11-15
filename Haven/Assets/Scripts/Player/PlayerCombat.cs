@@ -14,6 +14,7 @@ public class PlayerCombat
     float attackWindup = 0.1f;
     float attackDuration = 0.5f;
     float attackCooldown = 0.5f;
+    bool onCd;
 
     Collider2D hitCollider;
     readonly HashSet<Collider2D> enemiesInHitbox = new();
@@ -40,7 +41,7 @@ public class PlayerCombat
 
     public IEnumerator PlayerAttack()
     {
-        if (IsAttacking)
+        if (IsAttacking || onCd)
             yield break;
 
         IsAttacking = true;
@@ -50,10 +51,12 @@ public class PlayerCombat
         hitCollider.enabled = true;
         yield return new WaitForSeconds(attackDuration);
         hitCollider.enabled = false;
+        IsAttacking = false;
 
         // Cooldown begins after the complete attack animation.
+        onCd = true;
         yield return new WaitForSeconds(attackCooldown);
-        IsAttacking = false;
+        onCd = false;
     }
 
     void TryHit()

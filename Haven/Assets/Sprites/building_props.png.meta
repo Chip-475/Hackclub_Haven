@@ -1,0 +1,535 @@
+fileFormatVersion: 2
+guid: 3b88e42ccb1bd3646b058af7eb2520c3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4814567894561833896
+    second: building_props_0
+  - first:
+      213: 8584527098604901208
+    second: building_props_1
+  - first:
+      213: -4752451950744400870
+    second: building_props_2
+  - first:
+      213: 8390697218597420608
+    second: building_props_3
+  - first:
+      213: 8824610323000076180
+    second: building_props_4
+  - first:
+      213: -1502624663433666635
+    second: building_props_5
+  - first:
+      213: -3639662282103377058
+    second: building_props_6
+  - first:
+      213: 1135290295850502591
+    second: building_props_7
+  - first:
+      213: 3136468559867390834
+    second: building_props_8
+  - first:
+      213: -4856992948573866675
+    second: building_props_9
+  - first:
+      213: -5672314231191643968
+    second: building_props_10
+  - first:
+      213: 2983348677064173546
+    second: building_props_11
+  - first:
+      213: 6423983444029869006
+    second: building_props_12
+  - first:
+      213: 5500296802100187895
+    second: building_props_13
+  - first:
+      213: -8175626522200851049
+    second: building_props_14
+  - first:
+      213: 664493215276722521
+    second: building_props_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: building_props_0
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 767
+        width: 229
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a3cb5ecdf7c0d240800000000000000
+      internalID: 4814567894561833896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building_props_1
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 769
+        width: 227
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8535f05d9ed522770800000000000000
+      internalID: 8584527098604901208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building_props_2
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 766
+        width: 180
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1c84cf5126eb0eb0800000000000000
+      internalID: -4752451950744400870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building_props_3
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 913
+        width: 11
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04e7b5c1aaeb17470800000000000000
+      internalID: 8390697218597420608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building_props_4
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 786
+        width: 114
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4972aaf7550577a70800000000000000
+      internalID: 8824610323000076180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building_props_5
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 881
+        width: 6
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bf9b4174da952be0800000000000000
+      internalID: -1502624663433666635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building_props_6
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 422
+        width: 537
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5337dc20725d7dc0800000000000000
+      internalID: -3639662282103377058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building_props_7
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 421
+        width: 318
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb90e11528c51cf00800000000000000
+      internalID: 1135290295850502591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building_props_8
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 423
+        width: 275
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27ba3189989f68b20800000000000000
+      internalID: 3136468559867390834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building_props_9
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 194
+        width: 222
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d457daf85ae789cb0800000000000000
+      internalID: -4856992948573866675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building_props_10
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 192
+        width: 231
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c8dd6b8244e741b0800000000000000
+      internalID: -5672314231191643968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building_props_11
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 193
+        width: 237
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae7aa89b0dbf66920800000000000000
+      internalID: 2983348677064173546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building_props_12
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 194
+        width: 260
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecb046818e2962950800000000000000
+      internalID: 6423983444029869006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building_props_13
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 209
+        width: 257
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f21668bccaf45c40800000000000000
+      internalID: 5500296802100187895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building_props_14
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 202
+        width: 37
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79db4ff8ef65a8e80800000000000000
+      internalID: -8175626522200851049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building_props_15
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 211
+        width: 29
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 959e9340f01c83900800000000000000
+      internalID: 664493215276722521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      building_props_0: 4814567894561833896
+      building_props_1: 8584527098604901208
+      building_props_10: -5672314231191643968
+      building_props_11: 2983348677064173546
+      building_props_12: 6423983444029869006
+      building_props_13: 5500296802100187895
+      building_props_14: -8175626522200851049
+      building_props_15: 664493215276722521
+      building_props_2: -4752451950744400870
+      building_props_3: 8390697218597420608
+      building_props_4: 8824610323000076180
+      building_props_5: -1502624663433666635
+      building_props_6: -3639662282103377058
+      building_props_7: 1135290295850502591
+      building_props_8: 3136468559867390834
+      building_props_9: -4856992948573866675
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
