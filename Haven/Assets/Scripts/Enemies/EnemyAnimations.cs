@@ -20,7 +20,7 @@ public class EnemyAnimations
         animator = enemy.animator;
     }
 
-    public void Tick() => ChangeAnimations(enemy.state.ToString());
+    public void Tick() => ChangeAnimations(enemy.state == AnimationState.Running ? "Walk" : enemy.state.ToString());
 
     public void ChangeAnimations(string anim)
     {

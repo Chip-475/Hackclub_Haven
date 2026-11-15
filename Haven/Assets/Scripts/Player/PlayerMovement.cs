@@ -37,6 +37,9 @@ public class PlayerMovement
         sr = manager.spriteRenderer;
         groundChecker = manager.groundChecker;
         groundLayer = manager.groundLayer;
+        var collider = playerObj.GetComponent<BoxCollider2D>();
+        if (collider != null && groundChecker != null)
+            groundChecker.localPosition = new Vector3(collider.offset.x, collider.offset.y - collider.size.y / 2f + .02f, 0);
 
         PlayerManager.Inputs.Movement.Jump.performed += ctx => Jump();
         PlayerManager.Inputs.Movement.Dash.performed += ctx => Dash();
@@ -94,6 +97,11 @@ public class PlayerMovement
         dashTimer = dashDuration;
         Vector2 moveInput = PlayerManager.Inputs.Movement.Move.ReadValue<Vector2>();
         rb.AddForce(moveInput * dashSpeed, ForceMode2D.Impulse);
+    }
+
+    public void ResetActions()
+    {
+        IsDashing=false; IsMoving=false; IsJumping=false; canDash=true; dashTimer=0;
     }
 
     bool IsGrounded()
