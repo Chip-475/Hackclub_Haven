@@ -11,13 +11,13 @@ public class Enemy : MonoBehaviour, IDamageable
     [Header("Stats")]
     [SerializeField] float maxHealth;
     [SerializeField] float health;
-    [SerializeField] float attackDamage;
+    [SerializeField] protected float attackDamage;
     [SerializeField] float defense;
-    [SerializeField] float speed;
+    [SerializeField] protected float speed;
     [Space]
-    [SerializeField] float attackRange;
+    [SerializeField] protected float attackRange;
     [SerializeField] float detectionRange;
-    [SerializeField] float preferredDistanceFromPlayer;
+    [SerializeField] protected float preferredDistanceFromPlayer;
 
     [Header("Runtime")]
     [SerializeField] protected bool isDead;
@@ -27,12 +27,16 @@ public class Enemy : MonoBehaviour, IDamageable
 
     Vector2? destination;
 
-    public float DistanceFromPlayer => (PlayerManager.Instance.playerObj.transform.position - transform.position).sqrMagnitude;
+    protected GameObject Player => PlayerManager.Instance != null ? PlayerManager.Instance.playerObj : null;
+
+    public float DistanceFromPlayer => Player != null
+        ? Vector2.Distance(Player.transform.position, transform.position)
+        : float.PositiveInfinity;
 
     public float Health => health;
     public float Defense => defense;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         if (data == null)
         {
@@ -51,15 +55,19 @@ public class Enemy : MonoBehaviour, IDamageable
         detectionRange = data.detectionRange;
         preferredDistanceFromPlayer = data.preferredDistanceFromPlayer;
     }
-    private void Update()
+    protected virtual void Update()
     {
-        isDetectingPlayer = Detect();
+        isPlayerInDetectionRange = !isDead && DistanceFromPlayer <= detectionRange;
+        isDetectingPlayer = isPlayerInDetectionRange && Detect();
     }
 
     public bool Detect()
     {
+        if (isDead || Player == null || DistanceFromPlayer > detectionRange)
+            return false;
+
         Vector3 origin = transform.position;
-        Vector3 playerPos = PlayerManager.Instance.playerObj.transform.position;
+        Vector3 playerPos = Player.transform.position;
 
         int ignoreMask = ~(1 << LayerMask.NameToLayer("Enemy"));
         RaycastHit2D hit = Physics2D.Raycast(
@@ -68,7 +76,8 @@ public class Enemy : MonoBehaviour, IDamageable
             detectionRange,
             ignoreMask
         );
-        bool detected = hit.collider != null && hit.collider.gameObject.layer == LayerMask.NameToLayer("Player");
+        bool detected = hit.collider != null &&
+            (hit.transform == Player.transform || hit.transform.IsChildOf(Player.transform));
 
         Debug.DrawRay(
             origin,
