@@ -1,0 +1,335 @@
+fileFormatVersion: 2
+guid: 8d2a5feab30845e4ca1ba05b58c24e8a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2179069318484372802
+    second: 4k_running_anim_0
+  - first:
+      213: -2325229123326111442
+    second: 4k_running_anim_1
+  - first:
+      213: 4530294214777962627
+    second: 4k_running_anim_2
+  - first:
+      213: -8539479691644238715
+    second: 4k_running_anim_3
+  - first:
+      213: 8731680652507265487
+    second: 4k_running_anim_4
+  - first:
+      213: -8897878170808131509
+    second: 4k_running_anim_5
+  - first:
+      213: 6654004660767714513
+    second: 4k_running_anim_6
+  - first:
+      213: 2913219179619183252
+    second: 4k_running_anim_7
+  - first:
+      213: -3709460564308686194
+    second: 4k_running_anim_8
+  - first:
+      213: -389879607174624315
+    second: 4k_running_anim_9
+  - first:
+      213: -5763274265950936688
+    second: 4k_running_anim_10
+  - first:
+      213: -8124961965906343350
+    second: 4k_running_anim_11
+  - first:
+      213: 2053164614990342934
+    second: 4k_running_anim_12
+  - first:
+      213: -3819841003403083792
+    second: 4k_running_anim_13
+  - first:
+      213: 4900560061353506385
+    second: 4k_running_anim_14
+  - first:
+      213: 5768715245548643707
+    second: 4k_running_anim_15
+  - first:
+      213: -6461151618819904923
+    second: 4k_running_anim_16
+  - first:
+      213: -1052051403279859272
+    second: 4k_running_anim_17
+  - first:
+      213: -1947048680281591118
+    second: 4k_running_anim_18
+  - first:
+      213: 2295046162803443127
+    second: 4k_running_anim_19
+  - first:
+      213: -7790100269403301840
+    second: 4k_running_anim_20
+  - first:
+      213: -5108762414514875729
+    second: 4k_running_anim_21
+  - first:
+      213: -5448816524097195474
+    second: 4k_running_anim_22
+  - first:
+      213: 3869629078101754909
+    second: 4k_running_anim_23
+  - first:
+      213: -4689249337046326933
+    second: 4k_running_anim_24
+  - first:
+      213: -5362891093903482058
+    second: 4k_running_anim_25
+  - first:
+      213: 2420866095306432865
+    second: 4k_running_anim_26
+  - first:
+      213: -4512196206225388168
+    second: 4k_running_anim_27
+  - first:
+      213: 3991097364465885820
+    second: 4k_running_anim_28
+  - first:
+      213: -7479917574486105208
+    second: 4k_running_anim_29
+  - first:
+      213: 2940720314853681574
+    second: 4k_running_anim_30
+  - first:
+      213: 6719581688111592378
+    second: 4k_running_anim_31
+  - first:
+      213: -2091516025668582545
+    second: 4k_running_anim_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 4k_running_anim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 325
+        width: 282
+        height: 535
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb259c2000462c1e0800000000000000
+      internalID: -2179069318484372802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4k_running_anim_1
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 325
+        width: 244
+        height: 535
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e0f5230729d62f41a0d0416969b098c
+      internalID: -2325229123326111442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4k_running_anim_2
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 325
+        width: 384
+        height: 535
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53fcb357ec6ade7478f9cd777e02e1cc
+      internalID: 4530294214777962627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4k_running_anim_3
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 325
+        width: 304
+        height: 535
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a41d3701f0ad1647bf96fa2fdf65d0b
+      internalID: -8539479691644238715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4k_running_anim_4
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 325
+        width: 390
+        height: 535
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caff871208ca26b4c9579c8114eb4158
+      internalID: 8731680652507265487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 765607cfeae76cd4c86889adc60c4e00
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":1.0},"gridSpriteSize":{"x":384.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      4k_running_anim_0: -2179069318484372802
+      4k_running_anim_1: -2325229123326111442
+      4k_running_anim_2: 4530294214777962627
+      4k_running_anim_3: -8539479691644238715
+      4k_running_anim_4: 8731680652507265487
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

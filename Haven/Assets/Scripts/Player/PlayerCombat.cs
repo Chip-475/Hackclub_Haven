@@ -1,144 +1,85 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Data;
+using System.Globalization;
 using UnityEngine;
 
+[Serializable]
 public class PlayerCombat
 {
-    public enum AttackStage
-    {
-        Ready,
-        Windup,
-        Active,
-        Winddown,
-        Cooldown
-    }
-
     float attack;
     float defense;
 
+    float attackWindup = 0.1f;
+    float attackDuration = 0.5f;
     float attackCooldown = 0.5f;
-    float cooldownTimer;
 
-    Collider2D attackHitbox;
-    readonly List<Collider2D> overlapResults = new();
-    readonly HashSet<GameObject> enemiesInHitbox = new();
+    Collider2D hitCollider;
+    readonly HashSet<Collider2D> enemiesInHitbox = new();
 
-    public AttackStage CurrentStage { get; private set; } = AttackStage.Ready;
-    public bool CanAttack => CurrentStage == AttackStage.Ready;
+    public bool CanAttack { get; private set; }
     public bool IsAttacking { get; private set; }
-    public IReadOnlyCollection<GameObject> EnemiesInHitbox => enemiesInHitbox;
 
     public PlayerCombat(PlayerManager manager)
     {
         attack = manager.playerData.atk;
         defense = manager.playerData.def;
-        attackHitbox = manager.attackHitbox;
+        hitCollider = manager.hitCollider;
 
-        if (attackHitbox != null)
-            attackHitbox.enabled = false;
+        if (hitCollider != null)
+            hitCollider.enabled = false;
     }
 
     public void Tick()
     {
-        if (CurrentStage == AttackStage.Active)
-            RefreshEnemiesInHitbox();
-        else
-            enemiesInHitbox.Clear();
-
-        if (CurrentStage != AttackStage.Cooldown)
-            return;
-
-        cooldownTimer -= Time.deltaTime;
-        if (cooldownTimer <= 0f)
-            CurrentStage = AttackStage.Ready;
+        if (hitCollider.enabled)
+            TryHit();
+        else enemiesInHitbox.Clear();
     }
 
-    public bool TryStartAttack()
+    public IEnumerator PlayerAttack()
     {
-        if (!CanAttack)
-            return false;
+        if (IsAttacking)
+            yield break;
 
-        CurrentStage = AttackStage.Windup;
         IsAttacking = true;
-        return true;
-    }
 
-    // Call from an animation event on the first active attack frame.
-    public void BeginActiveFrames()
-    {
-        if (CurrentStage != AttackStage.Windup)
-            return;
+        // Attack phase.
+        yield return new WaitForSeconds(attackWindup);
+        hitCollider.enabled = true;
+        yield return new WaitForSeconds(attackDuration);
+        hitCollider.enabled = false;
 
-        CurrentStage = AttackStage.Active;
-        if (attackHitbox != null)
-            attackHitbox.enabled = true;
-    }
-
-    // Call from an animation event on the last active attack frame.
-    public void BeginWinddown()
-    {
-        if (CurrentStage != AttackStage.Active)
-            return;
-
-        if (attackHitbox != null)
-            attackHitbox.enabled = false;
-
-        CurrentStage = AttackStage.Winddown;
-    }
-
-    // Call from an animation event when the winddown animation ends.
-    public void BeginCooldown()
-    {
-        if (CurrentStage != AttackStage.Winddown)
-            return;
-
+        // Cooldown begins after the complete attack animation.
+        yield return new WaitForSeconds(attackCooldown);
         IsAttacking = false;
-        cooldownTimer = attackCooldown;
-        CurrentStage = AttackStage.Cooldown;
     }
 
-    public void Interrupt()
+    void TryHit()
     {
-        if (attackHitbox != null)
-            attackHitbox.enabled = false;
-
-        enemiesInHitbox.Clear();
-        overlapResults.Clear();
-        IsAttacking = false;
-        cooldownTimer = 0f;
-        CurrentStage = AttackStage.Ready;
-    }
-
-    void RefreshEnemiesInHitbox()
-    {
-        enemiesInHitbox.Clear();
-        overlapResults.Clear();
-
-        if (attackHitbox == null || !attackHitbox.enabled)
+        if (!hitCollider.enabled)
             return;
 
-        ContactFilter2D filter = new ContactFilter2D
+        ContactFilter2D filter = new()
         {
             useLayerMask = false,
             useDepth = false,
             useNormalAngle = false,
             useTriggers = true
         };
+        List<Collider2D> results = new();
 
-        attackHitbox.Overlap(filter, overlapResults);
+        hitCollider.Overlap(filter, results);
 
-        foreach (Collider2D other in overlapResults)
+        foreach (Collider2D collider in results)
         {
-            if (other == null)
+            if (collider == null || !collider.CompareTag("Enemy") || !collider.gameObject.TryGetComponent(out IDamageable damageable) || enemiesInHitbox.Contains(collider))
                 continue;
 
-            for (Transform candidate = other.transform; candidate != null; candidate = candidate.parent)
-            {
-                if (!candidate.CompareTag("Enemy"))
-                    continue;
-
-                enemiesInHitbox.Add(candidate.gameObject);
-                break;
-            }
+            enemiesInHitbox.Add(collider);
+            float damage = attack - damageable.Defense;
+            damageable.TakeDamage(damage);
         }
     }
 }

@@ -28,11 +28,9 @@ public class Enemy : MonoBehaviour, IDamageable
     Vector2? destination;
 
     public float DistanceFromPlayer => (PlayerManager.Instance.playerObj.transform.position - transform.position).sqrMagnitude;
-    public float Health
-    {
-        get => health;
-        set => health = value;
-    }
+
+    public float Health => health;
+    public float Defense => defense;
 
     private void Awake()
     {

@@ -10,10 +10,16 @@ public class PlayerManager : MonoBehaviour
     [Space]
     public Transform groundChecker;
     public LayerMask groundLayer;
-    public Collider2D attackHitbox;
 
-    public static PlayerMovement Movement { get; private set; }
-    public static PlayerCombat Combat { get; private set; }
+    public SpriteRenderer spriteRenderer;
+    public Animator animator;
+    public Collider2D hitCollider;
+
+    public PlayerMovement Movement;
+    public PlayerCombat Combat;
+    public PlayerAnimations Animations;
+
+    public PlayerAnimations.AnimationState state = PlayerAnimations.AnimationState.Idle;
 
     private void Awake()
     {
@@ -26,31 +32,13 @@ public class PlayerManager : MonoBehaviour
 
         Movement = new(this);
         Combat = new(this);
+        Animations = new(this);
+
+        Inputs.Combat.Attack.performed += ctx => StartCoroutine(Combat.PlayerAttack());
     }
     private void Update()
     {
         Movement.Tick();
         Combat.Tick();
-    }
-
-    public bool TryStartAttack()
-    {
-        return Combat != null && Combat.TryStartAttack();
-    }
-
-    // Add these methods as animation events on the Player object's attack animation.
-    public void AttackActiveStart()
-    {
-        Combat?.BeginActiveFrames();
-    }
-
-    public void AttackActiveEnd()
-    {
-        Combat?.BeginWinddown();
-    }
-
-    public void AttackWinddownEnd()
-    {
-        Combat?.BeginCooldown();
     }
 }

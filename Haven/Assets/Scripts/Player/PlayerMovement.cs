@@ -1,19 +1,23 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
+[Serializable]
 public class PlayerMovement
 {
     GameObject playerObj;
 
-    float speed;
-    float jumpForce;
+    [SerializeField] float speed;
+    [SerializeField] float jumpForce;
 
-    float dashSpeed;
-    bool canDash = true;
-    float dashDuration = 0.3f;
-    float dashTimer = 0f;
+    [SerializeField] float dashSpeed;
+    [SerializeField] bool canDash = true;
+    [SerializeField] float dashDuration = 0.3f;
+    [SerializeField] float dashTimer = 0f;
 
     Rigidbody2D rb;
+    SpriteRenderer sr;
 
     Transform groundChecker;
     LayerMask groundLayer;
@@ -30,6 +34,7 @@ public class PlayerMovement
         dashSpeed = manager.playerData.dashSpeed;
 
         rb = playerObj.GetComponent<Rigidbody2D>();
+        sr = manager.spriteRenderer;
         groundChecker = manager.groundChecker;
         groundLayer = manager.groundLayer;
 
@@ -47,10 +52,7 @@ public class PlayerMovement
             dashTimer -= Time.deltaTime;
             IsDashing = dashTimer >= 0;
         }
-        else
-        {
-            Move();
-        }
+        else Move();
     }
 
     void Move()
@@ -64,7 +66,9 @@ public class PlayerMovement
             rb.linearVelocity.y
         );
 
-        // Sprite flip logic
+        if (rb.linearVelocityX == 0)
+            return;
+        rb.transform.localScale = rb.linearVelocityX > 0 ? new Vector3(1, 1, 1) : new Vector3(-1, 1, 1);
     }
     void Jump()
     {
