@@ -51,7 +51,16 @@ public class GameplayDirector : MonoBehaviour
         if(player.playerObj.transform.position.y<-12) player.Die();
     }
     public void Impact() { if(IsBouncing) return; flash=.9f; Shake=.08f; AudioManager.Instance?.Impact(); }
-    public void Bounceback(PlayerManager player) { if(!IsBouncing) StartCoroutine(Respawn(player)); }
+    public void HitFeedback(float strength=.035f)
+    {
+        if(!IsBouncing) Shake=Mathf.Max(Shake,strength);
+    }
+    public void Bounceback(PlayerManager player)
+    {
+        if(IsBouncing) return;
+        FindAnyObjectByType<BossController>()?.PlayerDied();
+        StartCoroutine(Respawn(player));
+    }
     IEnumerator Respawn(PlayerManager player)
     {
         IsBouncing=true; previousScale=Time.timeScale; Time.timeScale=0;

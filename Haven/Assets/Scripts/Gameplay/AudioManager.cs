@@ -4,7 +4,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
-    public AudioClip explorationMusic, bossMusic;
+    public AudioClip explorationMusic, bossMusic; // bossMusic is the victory cue, never the fight loop.
     [Range(0,1)] public float musicVolume = .3f, effectsVolume = .5f;
     AudioSource music, effects;
     Coroutine fade;
@@ -29,16 +29,22 @@ public class AudioManager : MonoBehaviour
     public void Bounce() => PlayEffect(bounce);
     public void SetMusic(bool boss)
     {
-        var clip = boss ? bossMusic : explorationMusic;
+        var clip = explorationMusic;
         if (clip == null || music.clip == clip) return;
         if (fade != null) StopCoroutine(fade);
         fade = StartCoroutine(SwitchMusic(clip));
     }
-    IEnumerator SwitchMusic(AudioClip clip)
+    public void PlayVictory()
+    {
+        if(bossMusic==null) return;
+        if(fade!=null) StopCoroutine(fade);
+        fade=StartCoroutine(SwitchMusic(bossMusic,47f,false));
+    }
+    IEnumerator SwitchMusic(AudioClip clip, float startSeconds=0, bool loop=true)
     {
         float volume = music.volume;
         for(float t=0;t<.5f;t+=Time.unscaledDeltaTime) { music.volume = Mathf.Lerp(volume,0,t/.5f); yield return null; }
-        music.clip=clip; music.Play();
+        music.clip=clip; music.loop=loop; music.time=Mathf.Clamp(startSeconds,0,Mathf.Max(0,clip.length-.01f)); music.Play();
         for(float t=0;t<.8f;t+=Time.unscaledDeltaTime) { music.volume=musicVolume*t/.8f; yield return null; }
         music.volume=musicVolume;
     }

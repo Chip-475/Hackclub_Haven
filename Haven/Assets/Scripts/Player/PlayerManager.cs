@@ -24,14 +24,27 @@ public class PlayerManager : MonoBehaviour, IDamageable
     public float Health { get; private set; }
     public float Defense => playerData.def;
     public bool IsRespawning { get; private set; }
+    public bool CinematicLocked { get; private set; }
+    public void SetCinematicLock(bool locked)
+    {
+        CinematicLocked=locked;
+        if(locked)
+        {
+            Inputs.Disable(); StopAllCoroutines(); Combat.CancelAttack(); Movement.ResetActions();
+            playerObj.GetComponent<Rigidbody2D>().linearVelocity=Vector2.zero;
+            state=PlayerAnimations.AnimationState.Idle; animator.Play("Idle",0,0);
+        }
+        else if(!IsRespawning) Inputs.Enable();
+    }
     float invulnerableUntil;
 
     public void TakeDamage(float damage)
     {
-        if(IsRespawning || Time.time < invulnerableUntil || damage <= 0) return;
+        if(IsRespawning || CinematicLocked || Time.time < invulnerableUntil || damage <= 0) return;
         Health = Mathf.Max(0, Health-damage);
         invulnerableUntil = Time.time + .7f;
         AudioManager.Instance?.Impact();
+        GameplayDirector.Instance?.HitFeedback(.055f);
         if(Health<=0) Die();
     }
 
@@ -72,7 +85,7 @@ public class PlayerManager : MonoBehaviour, IDamageable
     }
     private void Update()
     {
-        if(IsRespawning) return;
+        if(IsRespawning || CinematicLocked) return;
         Movement.Tick();
         Combat.Tick();
         Animations.Tick();

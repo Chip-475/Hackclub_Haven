@@ -125,6 +125,7 @@ public class Enemy : MonoBehaviour, IDamageable
         if (isDead || damage <= 0f)
             return;
 
+        GameplayDirector.Instance?.HitFeedback(.025f);
         health -= damage;
         health = Mathf.Clamp(health, 0f, maxHealth);
 
