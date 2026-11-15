@@ -20,10 +20,10 @@ public class Enemy : MonoBehaviour, IDamageable
     [SerializeField] float preferredDistanceFromPlayer;
 
     [Header("Runtime")]
-    [SerializeField] bool isDead;
-    [SerializeField] bool isPlayerInDetectionRange;
-    [SerializeField] bool isDetectingPlayer;
-    [SerializeField] bool canMove = true;
+    [SerializeField] protected bool isDead;
+    [SerializeField] protected bool isPlayerInDetectionRange;
+    [SerializeField] protected bool isDetectingPlayer;
+    [SerializeField] protected bool canMove = true;
 
     Vector2? destination;
 
