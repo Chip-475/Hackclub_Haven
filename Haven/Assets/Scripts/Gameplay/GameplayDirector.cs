@@ -16,19 +16,20 @@ public class GameplayDirector : MonoBehaviour
     void Awake() { Instance=this; }
     void Start()
     {
+        gameObject.AddComponent<PlayerVisibility>();
         var audio=gameObject.AddComponent<AudioManager>();
         audio.explorationMusic=explorationMusic; audio.bossMusic=bossMusic; audio.SetMusic(false);
         var guard=FindAnyObjectByType<Swordsman>();
         if(guard!=null)
         {
-            guard.transform.position=new Vector3(5,-2.95f,0); guard.name="Guard - Atrium";
-            var second=Instantiate(guard,new Vector3(24,-2.95f,0),Quaternion.identity); second.name="Guard - Gallery";
+            guard.transform.position=new Vector3(5,-2.95f,0); guard.name="Guard - Atrium"; guard.PatrolBounds=new Vector2(-6,7);
+            var second=Instantiate(guard,new Vector3(23,-2.95f,0),Quaternion.identity); second.name="Guard - Gallery"; second.PatrolBounds=new Vector2(13,27);
         }
         if(arenaBackdrop!=null)
         {
             var backdrop=new GameObject("Boss arena backdrop"); var sr=backdrop.AddComponent<SpriteRenderer>(); sr.sprite=arenaBackdrop; sr.sortingOrder=-2;
-            backdrop.transform.position=new Vector3(41,.5f,0);
-            backdrop.transform.localScale=Vector3.one*(16f/arenaBackdrop.bounds.size.x);
+            backdrop.transform.position=new Vector3(41,1.55f,0);
+            backdrop.transform.localScale=Vector3.one*(18f/arenaBackdrop.bounds.size.x);
         }
         circle=new Texture2D(64,64,TextureFormat.RGBA32,false);
         for(int y=0;y<64;y++) for(int x=0;x<64;x++) circle.SetPixel(x,y,new Color(.12f,.65f,1,Mathf.Clamp01(31-Vector2.Distance(new Vector2(x,y),new Vector2(31.5f,31.5f)))));
@@ -43,10 +44,11 @@ public class GameplayDirector : MonoBehaviour
         float x=player.playerObj.transform.position.x;
         if(x>32) RespawnPoint=new Vector3(33,-2.95f,0);
         else if(x>12) RespawnPoint=new Vector3(12,-2.95f,0);
+        else RespawnPoint=new Vector3(0,-2.95f,0);
         if(!bossStarted && x>32)
         {
             bossStarted=true;
-            var boss=new GameObject("Halo Boss"); boss.transform.position=new Vector3(43,-3.5f,0); boss.AddComponent<BossController>();
+            var boss=new GameObject("Halo Boss"); boss.transform.position=new Vector3(39,-3.5f,0); boss.AddComponent<BossController>();
             AudioManager.Instance?.SetMusic(true);
         }
         if(player.playerObj.transform.position.y<-12) player.Die();
@@ -72,6 +74,8 @@ public class GameplayDirector : MonoBehaviour
             int bounce=(int)(u*3); if(bounce!=lastBounce) { AudioManager.Instance?.Bounce(); lastBounce=bounce; }
             yield return null;
         }
+        orb=new Vector2(.5f,.5f);
+        yield return new WaitForSecondsRealtime(.08f);
         player.RestoreAfterDeath(RespawnPoint);
         camera.transform.position=new Vector3(RespawnPoint.x,RespawnPoint.y,camera.transform.position.z);
         for(int i=0;i<renders.Length;i++) renders[i].enabled=visible[i];

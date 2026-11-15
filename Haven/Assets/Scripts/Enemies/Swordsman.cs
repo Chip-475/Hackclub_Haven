@@ -15,6 +15,7 @@ public class Swordsman : Enemy
     public bool IsAttacking { get; private set; }
     public bool CanAttack => !isDead && !IsAttacking && Time.time >= nextAttackTime;
 
+    public Vector2 PatrolBounds = new Vector2(float.NegativeInfinity, float.PositiveInfinity);
     Rigidbody2D body;
     float horizontalMovement;
     float attackTimer;
@@ -31,6 +32,7 @@ public class Swordsman : Enemy
 
     protected override void Update()
     {
+        if (Time.timeScale == 0) return;
         base.Update();
         AI();
     }
@@ -38,6 +40,8 @@ public class Swordsman : Enemy
     void FixedUpdate()
     {
         // Preserve gravity and collisions while approaching on the ground.
+        if ((transform.position.x <= PatrolBounds.x && horizontalMovement < 0) ||
+            (transform.position.x >= PatrolBounds.y && horizontalMovement > 0)) horizontalMovement = 0;
         body.linearVelocityX = !isDead && canMove && !IsAttacking ? horizontalMovement : 0f;
     }
 
