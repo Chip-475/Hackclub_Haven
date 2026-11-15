@@ -1,19 +1,16 @@
 using UnityEngine;
+using AnimationState = EnemyAnimations.AnimationState;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Swordsman : Enemy
 {
-    public enum AnimationState { Idle, Running, Attack }
-
     [Header("Attack Timing")]
     [SerializeField, Min(0f)] float attackWindup = 0.2f;
     [SerializeField, Min(0f)] float attackDuration = 0.4f;
     [SerializeField, Min(0f)] float attackCooldown = 1f;
 
     [Header("Animation")]
-    [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer spriteRenderer;
-    public AnimationState state = AnimationState.Idle;
 
     public bool IsAttacking { get; private set; }
     public bool CanAttack => !isDead && !IsAttacking && Time.time >= nextAttackTime;
@@ -28,8 +25,6 @@ public class Swordsman : Enemy
     {
         base.Awake();
         body = GetComponent<Rigidbody2D>();
-        if (animator == null)
-            animator = GetComponentInChildren<Animator>();
         if (spriteRenderer == null)
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
@@ -38,7 +33,6 @@ public class Swordsman : Enemy
     {
         base.Update();
         AI();
-        UpdateAnimation();
     }
 
     void FixedUpdate()
@@ -108,18 +102,6 @@ public class Swordsman : Enemy
             target = Player.GetComponentInChildren<IDamageable>();
         if (target != null)
             target.TakeDamage(Mathf.Max(0f, attackDamage - target.Defense));
-    }
-
-    void UpdateAnimation()
-    {
-        if (animator == null || animator.runtimeAnimatorController == null)
-            return;
-
-        string animationName = state.ToString();
-        if (animator.HasState(0, Animator.StringToHash(animationName)) &&
-            !animator.GetCurrentAnimatorStateInfo(0).IsName(animationName) &&
-            !(animator.IsInTransition(0) && animator.GetNextAnimatorStateInfo(0).IsName(animationName)))
-            animator.CrossFade(animationName, 0f);
     }
 
     void OnDisable()

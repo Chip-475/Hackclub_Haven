@@ -25,6 +25,11 @@ public class Enemy : MonoBehaviour, IDamageable
     [SerializeField] protected bool isDetectingPlayer;
     [SerializeField] protected bool canMove = true;
 
+    [Header("Animation")]
+    public Animator animator;
+    public EnemyAnimations Animations;
+    public EnemyAnimations.AnimationState state = EnemyAnimations.AnimationState.Idle;
+
     Vector2? destination;
 
     protected GameObject Player => PlayerManager.Instance != null ? PlayerManager.Instance.playerObj : null;
@@ -54,11 +59,21 @@ public class Enemy : MonoBehaviour, IDamageable
         attackRange = data.attackRange;
         detectionRange = data.detectionRange;
         preferredDistanceFromPlayer = data.preferredDistanceFromPlayer;
+
+        if (animator == null)
+            animator = GetComponentInChildren<Animator>();
+        Animations = new(this);
     }
     protected virtual void Update()
     {
         isPlayerInDetectionRange = !isDead && DistanceFromPlayer <= detectionRange;
         isDetectingPlayer = isPlayerInDetectionRange && Detect();
+    }
+
+    protected virtual void LateUpdate()
+    {
+        // Apply the state after the enemy's AI has finished updating it.
+        Animations?.Tick();
     }
 
     public bool Detect()
