@@ -6,6 +6,7 @@ public class BossController : MonoBehaviour, IDamageable
     public enum AnimationState { Spawn, Idle, Walking, Attack, Dead }
     public AnimationState state;
     public float Health { get; private set; } = 35f;
+    public float MaxHealth => 35f;
     public float Defense => 0;
     SpriteRenderer visual;
     Sprite[] spawn, walk, attack;
@@ -25,6 +26,7 @@ public class BossController : MonoBehaviour, IDamageable
         visual=gameObject.AddComponent<SpriteRenderer>(); visual.sortingOrder=5;
         spawn=Frames("Spawn",5); walk=Frames("Walk",4); attack=Frames("Attack",3);
         var collider=gameObject.AddComponent<BoxCollider2D>(); collider.size=new Vector2(1.2f,3.7f); collider.offset=new Vector2(0,1.85f);
+        gameObject.AddComponent<EnemyPresentation>();
         gameObject.tag="Enemy"; gameObject.layer=LayerMask.NameToLayer("Enemy");
     }
     IEnumerator Start()

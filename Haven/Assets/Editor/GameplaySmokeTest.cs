@@ -44,6 +44,11 @@ public static class GameplaySmokeTest
                 Check(UnityEngine.Object.FindObjectsByType<Swordsman>().Length==2,"Expected two guards");
                 Check(UnityEngine.Object.FindAnyObjectByType<PlayerVisibility>()!=null,"Fog missing");
                 Check(AudioManager.Instance!=null,"Audio manager missing");
+                foreach(var guard in UnityEngine.Object.FindObjectsByType<Swordsman>())
+                {
+                    Check(guard.GetComponent<EnemyPresentation>()!=null,"Enemy health bar missing");
+                    Check(Physics2D.GetIgnoreCollision(guard.GetComponent<Collider2D>(),player.playerObj.GetComponent<Collider2D>()),"Enemy body collides with player");
+                }
                 var box=player.playerObj.GetComponent<BoxCollider2D>();
                 Vector2 size=box.size* .98f;
                 var hits=Physics2D.BoxCastAll(new Vector2(0,-3.45f+size.y/2),size,0,Vector2.right,49,player.groundLayer);
@@ -67,13 +72,13 @@ public static class GameplaySmokeTest
             {
                 var boss=UnityEngine.Object.FindAnyObjectByType<BossController>();
                 Check(boss!=null && boss.Health==bossHealth && Vector3.Distance(bossPosition,boss.transform.position)<.01f,"World changed during Bounceback");
-                stage=3; deadline=EditorApplication.timeSinceStartup+2;
+                stage=3; deadline=EditorApplication.timeSinceStartup+7;
             }
             else if(stage==3)
             {
                 var boss=UnityEngine.Object.FindAnyObjectByType<BossController>();
                 Check(!player.IsRespawning && Time.timeScale==1 && player.Health==player.playerData.maxHp,"Respawn failed");
-                Check(Vector3.Distance(player.playerObj.transform.position,director.RespawnPoint)<.2f,"Unsafe checkpoint");
+                Check(Vector3.Distance(player.playerObj.transform.position,director.RespawnPoint)<.2f && director.RespawnPoint.x==-5,"Did not return to the first room");
                 Check(boss!=null && boss.Health==bossHealth,"Enemy health changed during respawn");
                 boss.TakeDamage(1000);
                 stage=4; deadline=EditorApplication.timeSinceStartup+.2;

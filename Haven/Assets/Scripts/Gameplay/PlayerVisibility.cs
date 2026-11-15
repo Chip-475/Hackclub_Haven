@@ -28,9 +28,11 @@ public class PlayerVisibility : MonoBehaviour
         Vector3 center=camera.WorldToScreenPoint(player.playerObj.transform.position+Vector3.up*.7f);
         float radius=darkRadius*Screen.height/(2*camera.orthographicSize);
         float left=center.x-radius, top=Screen.height-center.y-radius, diameter=radius*2;
-        GUI.depth=-50; var color=GUI.color; GUI.color=Color.white;
+        float fog = 1 - Mathf.SmoothStep(0,1,Mathf.InverseLerp(28,32,player.playerObj.transform.position.x));
+        if(fog<=0) return;
+        GUI.depth=-50; var color=GUI.color; GUI.color=new Color(1,1,1,fog);
         GUI.DrawTexture(new Rect(left,top,diameter,diameter),gradient);
-        GUI.color=new Color(.015f,.018f,.025f,1);
+        GUI.color=new Color(.015f,.018f,.025f,fog);
         Fill(0,0,Screen.width,Mathf.Max(0,top));
         Fill(0,top+diameter,Screen.width,Mathf.Max(0,Screen.height-top-diameter));
         Fill(0,Mathf.Max(0,top),Mathf.Max(0,left),diameter);
