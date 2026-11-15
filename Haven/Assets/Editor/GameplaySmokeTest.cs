@@ -12,6 +12,7 @@ public static class GameplaySmokeTest
     static double deadline;
     static Vector3 bossPosition;
     static float bossHealth;
+    static double timeout;
     static GameplaySmokeTest()
     {
         EditorApplication.playModeStateChanged += mode =>
@@ -56,14 +57,21 @@ public static class GameplaySmokeTest
                 foreach(var guard in UnityEngine.Object.FindObjectsByType<Swordsman>()) guard.enabled=false;
                 player.playerObj.transform.position=new Vector3(36,-2.95f,0);
                 Physics2D.SyncTransforms();
-                stage=1; deadline=EditorApplication.timeSinceStartup+1.7;
+                stage=1; deadline=EditorApplication.timeSinceStartup+.1; timeout=EditorApplication.timeSinceStartup+30;
             }
             else if(stage==1)
             {
                 var boss=UnityEngine.Object.FindAnyObjectByType<BossController>();
-                Check(boss!=null && boss.state!=BossController.AnimationState.Spawn,"Boss failed to spawn and finish introduction");
+                Check(boss!=null,"Boss failed to spawn");
+                if(boss.state==BossController.AnimationState.Dialogue || boss.state==BossController.AnimationState.Spawn)
+                {
+                    Check(EditorApplication.timeSinceStartup<timeout,"Introduction timed out");
+                    boss.GetComponent<BossDialogue>().Advance(); deadline=EditorApplication.timeSinceStartup+.1; return;
+                }
+                boss.TakeDamage(10);
+                Check(boss.Health<boss.MaxHealth,"Boss did not take damage");
                 Check(boss.GetComponent<SpriteRenderer>().sprite!=null,"Boss sprites missing");
-                bossHealth=boss.Health; bossPosition=boss.transform.position;
+                bossHealth=boss.MaxHealth; bossPosition=boss.transform.position;
                 player.Die();
                 Check(player.IsRespawning && Time.timeScale==0,"Bounceback did not freeze the world");
                 stage=2; deadline=EditorApplication.timeSinceStartup+.8;
@@ -71,7 +79,7 @@ public static class GameplaySmokeTest
             else if(stage==2)
             {
                 var boss=UnityEngine.Object.FindAnyObjectByType<BossController>();
-                Check(boss!=null && boss.Health==bossHealth && Vector3.Distance(bossPosition,boss.transform.position)<.01f,"World changed during Bounceback");
+                Check(boss!=null && boss.Health==bossHealth && Vector3.Distance(bossPosition,boss.transform.position)<.01f,"Boss health did not reset or boss moved during Bounceback");
                 stage=3; deadline=EditorApplication.timeSinceStartup+7;
             }
             else if(stage==3)
@@ -79,13 +87,20 @@ public static class GameplaySmokeTest
                 var boss=UnityEngine.Object.FindAnyObjectByType<BossController>();
                 Check(!player.IsRespawning && Time.timeScale==1 && player.Health==player.playerData.maxHp,"Respawn failed");
                 Check(Vector3.Distance(player.playerObj.transform.position,director.RespawnPoint)<.2f && director.RespawnPoint.x==-5,"Did not return to the first room");
-                Check(boss!=null && boss.Health==bossHealth,"Enemy health changed during respawn");
-                boss.TakeDamage(1000);
-                stage=4; deadline=EditorApplication.timeSinceStartup+.2;
+                Check(boss!=null && boss.Health==bossHealth,"Boss did not retain full health after respawn");
+                Check(boss.ReturnCount==1,"Return dialogue did not advance");
+                boss.Die();
+                stage=4; deadline=EditorApplication.timeSinceStartup+.1; timeout=EditorApplication.timeSinceStartup+30;
             }
             else
             {
-                Check(UnityEngine.Object.FindAnyObjectByType<BossController>()==null,"Boss death failed");
+                var boss=UnityEngine.Object.FindAnyObjectByType<BossController>();
+                if(boss!=null)
+                {
+                    Check(EditorApplication.timeSinceStartup<timeout,"Fracture ending timed out");
+                    Check(!player.CinematicLocked,"Player must remain free during ending");
+                    boss.GetComponent<BossDialogue>().Advance(); deadline=EditorApplication.timeSinceStartup+.1; return;
+                }
                 Debug.Log("HAVEN SMOKE TEST PASSED: route, guards, fog, audio, boss intro, Bounceback, world preservation, boss death.");
                 Finish();
             }

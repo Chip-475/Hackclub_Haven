@@ -20,9 +20,9 @@ public class BossDialogue : MonoBehaviour
         new[]{"SPIRITO|Ho imparato ogni tuo movimento. Ho dimenticato perché ti colpisco.", "RAGAZZO|Non sono tornato più forte. Sono soltanto tornato.", "SPIRITO|E io non riesco più a essere quello che ti aspettava."}
     };
     public static readonly string[] Ending = {
-        "SPIRITO|I have killed you more times than I can remember.",
-        "SPIRITO|No. That's a lie.",
-        "SPIRITO|I remember them all."
+        "SPIRITO|Ti ho ucciso più volte di quante riesca a ricordare.",
+        "SPIRITO|No. È una bugia.",
+        "SPIRITO|Le ricordo tutte."
     };
     public void Advance() => advance=true;
     void Update()

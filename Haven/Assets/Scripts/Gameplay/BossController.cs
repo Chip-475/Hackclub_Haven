@@ -5,8 +5,8 @@ public class BossController : MonoBehaviour, IDamageable
 {
     public enum AnimationState { Spawn, Idle, Walking, Attack, Dead, Dialogue, Waiting, Fracture }
     public AnimationState state;
-    public float Health { get; private set; } = 35f;
-    public float MaxHealth => 35f;
+    public float Health { get; private set; } = 70f;
+    public float MaxHealth => 70f;
     public float Defense => 0;
     SpriteRenderer visual;
     Sprite[] spawn, walk, attack;
@@ -55,9 +55,10 @@ public class BossController : MonoBehaviour, IDamageable
     }
     public void PlayerDied()
     {
-        if(state==AnimationState.Dead || state==AnimationState.Fracture || state==AnimationState.Waiting) return;
-        if(PlayerManager.Instance.playerObj.transform.position.x<32) return;
-        returns++;
+        if(state==AnimationState.Dead) return;
+        if(state!=AnimationState.Waiting && PlayerManager.Instance.playerObj.transform.position.x>=32) returns++;
+        Health=MaxHealth;
+        clock=0; fightTime=0; hurtUntil=0; cooldown=0; hit=false;
         StopAllCoroutines(); dialogue.Cancel();
         PlayerManager.Instance.SetCinematicLock(false);
         state=AnimationState.Waiting; Show(spawn,0); visual.color=Color.white;
@@ -73,8 +74,8 @@ public class BossController : MonoBehaviour, IDamageable
             return;
         }
         visual.color=Time.time<hurtUntil?new Color(1,.45f,.35f):Color.white;
-        fightTime+=Time.deltaTime;
-        if(returns>=5 && fightTime>=10f) { Die(); return; }
+        if(player.playerObj.transform.position.x>=32) fightTime+=Time.deltaTime;
+        if(returns>=5 && fightTime>=25f && Health<=MaxHealth*.35f) { Die(); return; }
         float dx=player.playerObj.transform.position.x-transform.position.x;
         if(state==AnimationState.Attack)
         {
@@ -83,9 +84,9 @@ public class BossController : MonoBehaviour, IDamageable
             {
                 hit=true; AudioManager.Instance?.Impact();
                 var pos=player.playerObj.transform.position;
-                if(Mathf.Abs(dx)<3.1f && dx*facing>=0 && pos.y<transform.position.y+3.8f && pos.y>transform.position.y-.5f) player.TakeDamage(2);
+                if(Mathf.Abs(dx)<3.1f && dx*facing>=0 && pos.y<transform.position.y+3.8f && pos.y>transform.position.y-.5f) player.TakeDamage(3);
             }
-            if(clock>=.8f) { state=AnimationState.Idle; cooldown=Time.time+Mathf.Max(.65f,1.2f-returns*.1f); }
+            if(clock>=.8f) { state=AnimationState.Idle; cooldown=Time.time+Mathf.Max(.5f,.9f-returns*.08f); }
             return;
         }
         facing=dx<0?-1:1; visual.flipX=facing<0;
@@ -93,7 +94,7 @@ public class BossController : MonoBehaviour, IDamageable
         if(Mathf.Abs(dx)>2.5f)
         {
             state=AnimationState.Walking; clock+=Time.deltaTime;
-            transform.position=new Vector3(Mathf.Clamp(transform.position.x+facing*(1.7f+Mathf.Min(returns,5)*.12f)*Time.deltaTime,34,48),transform.position.y,0);
+            transform.position=new Vector3(Mathf.Clamp(transform.position.x+facing*(2.4f+Mathf.Min(returns,5)*.16f)*Time.deltaTime,34,48),transform.position.y,0);
             Show(walk,(int)(clock*6)%4);
         }
         else if(Time.time>=cooldown) { state=AnimationState.Attack; clock=0; hit=false; }
