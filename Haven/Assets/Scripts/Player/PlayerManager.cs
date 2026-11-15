@@ -40,5 +40,6 @@ public class PlayerManager : MonoBehaviour
     {
         Movement.Tick();
         Combat.Tick();
+        Animations.Tick();
     }
 }

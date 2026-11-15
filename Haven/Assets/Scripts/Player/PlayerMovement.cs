@@ -53,6 +53,9 @@ public class PlayerMovement
             IsDashing = dashTimer >= 0;
         }
         else Move();
+
+        IsMoving = !Mathf.Approximately(rb.linearVelocityX, 0f);
+        IsJumping = !IsGrounded();
     }
 
     void Move()
