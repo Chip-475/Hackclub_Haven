@@ -1,0 +1,405 @@
+fileFormatVersion: 2
+guid: b71f65d9e3034014b8b988df1ccd8e8a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9216094170698467794
+    second: Echobound Five-Frame Horned Combat Sheet_0
+  - first:
+      213: 2698300967185536373
+    second: Echobound Five-Frame Horned Combat Sheet_1
+  - first:
+      213: 7097556929346164197
+    second: Echobound Five-Frame Horned Combat Sheet_2
+  - first:
+      213: 3654981072373553112
+    second: Echobound Five-Frame Horned Combat Sheet_3
+  - first:
+      213: 1913530396928052060
+    second: Echobound Five-Frame Horned Combat Sheet_4
+  - first:
+      213: -4315834895156142200
+    second: Echobound Five-Frame Horned Combat Sheet_5
+  - first:
+      213: -4407082812114258611
+    second: Echobound Five-Frame Horned Combat Sheet_6
+  - first:
+      213: 5437932333980625606
+    second: Echobound Five-Frame Horned Combat Sheet_7
+  - first:
+      213: -730819215859003317
+    second: Echobound Five-Frame Horned Combat Sheet_8
+  - first:
+      213: 7440915699811742360
+    second: Echobound Five-Frame Horned Combat Sheet_9
+  - first:
+      213: 2192834208676555882
+    second: Echobound Five-Frame Horned Combat Sheet_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Echobound Five-Frame Horned Combat Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 0
+        width: 390
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d9c70db1d426ef70800000000000000
+      internalID: 9216094170698467794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Echobound Five-Frame Horned Combat Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 406
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 575df26fe6a427520800000000000000
+      internalID: 2698300967185536373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Echobound Five-Frame Horned Combat Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 0
+        width: 430
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e55aca3c669f7260800000000000000
+      internalID: 7097556929346164197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Echobound Five-Frame Horned Combat Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 693
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d71a9f9be919b230800000000000000
+      internalID: 3654981072373553112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Echobound Five-Frame Horned Combat Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 0
+        width: 456
+        height: 692
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5b0fc7f1c93e8a10800000000000000
+      internalID: 1913530396928052060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Echobound Five-Frame Horned Combat Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 0
+        width: 456
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88f9bf477031b14c0800000000000000
+      internalID: -4315834895156142200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Echobound Five-Frame Horned Combat Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 642
+        width: 88
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4533383885e6d2c0800000000000000
+      internalID: -4407082812114258611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Echobound Five-Frame Horned Combat Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1705
+        y: 620
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6caa68775aa677b40800000000000000
+      internalID: 5437932333980625606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Echobound Five-Frame Horned Combat Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 624
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b40d1b39bcb9bd5f0800000000000000
+      internalID: -730819215859003317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Echobound Five-Frame Horned Combat Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1721
+        y: 628
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 892f7e2c761734760800000000000000
+      internalID: 7440915699811742360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Echobound Five-Frame Horned Combat Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1719
+        y: 594
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6cad7b38138e6e10800000000000000
+      internalID: 2192834208676555882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Echobound Five-Frame Horned Combat Sheet_0: 9216094170698467794
+      Echobound Five-Frame Horned Combat Sheet_1: 2698300967185536373
+      Echobound Five-Frame Horned Combat Sheet_10: 2192834208676555882
+      Echobound Five-Frame Horned Combat Sheet_2: 7097556929346164197
+      Echobound Five-Frame Horned Combat Sheet_3: 3654981072373553112
+      Echobound Five-Frame Horned Combat Sheet_4: 1913530396928052060
+      Echobound Five-Frame Horned Combat Sheet_5: -4315834895156142200
+      Echobound Five-Frame Horned Combat Sheet_6: -4407082812114258611
+      Echobound Five-Frame Horned Combat Sheet_7: 5437932333980625606
+      Echobound Five-Frame Horned Combat Sheet_8: -730819215859003317
+      Echobound Five-Frame Horned Combat Sheet_9: 7440915699811742360
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

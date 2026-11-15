@@ -1,0 +1,925 @@
+fileFormatVersion: 2
+guid: 006484371b6d9a6499103c85a3733c8a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 689338255170827609
+    second: Horned Boss Three-Frame Punch_0
+  - first:
+      213: -7211214654969496364
+    second: Horned Boss Three-Frame Punch_1
+  - first:
+      213: 7244170786957774164
+    second: Horned Boss Three-Frame Punch_2
+  - first:
+      213: -5249685757935177722
+    second: Horned Boss Three-Frame Punch_3
+  - first:
+      213: 3317640185484870403
+    second: Horned Boss Three-Frame Punch_4
+  - first:
+      213: 5212040223818654466
+    second: Horned Boss Three-Frame Punch_5
+  - first:
+      213: -7992138129185502920
+    second: Horned Boss Three-Frame Punch_6
+  - first:
+      213: 7762908172501127569
+    second: Horned Boss Three-Frame Punch_7
+  - first:
+      213: 6201440326895941364
+    second: Horned Boss Three-Frame Punch_8
+  - first:
+      213: -7049909071930268496
+    second: Horned Boss Three-Frame Punch_9
+  - first:
+      213: 7080152593792907809
+    second: Horned Boss Three-Frame Punch_10
+  - first:
+      213: -4084523086834566258
+    second: Horned Boss Three-Frame Punch_11
+  - first:
+      213: 5494666061488330872
+    second: Horned Boss Three-Frame Punch_12
+  - first:
+      213: -5929226498022271056
+    second: Horned Boss Three-Frame Punch_13
+  - first:
+      213: -7962917481972266971
+    second: Horned Boss Three-Frame Punch_14
+  - first:
+      213: -5183930371415912206
+    second: Horned Boss Three-Frame Punch_15
+  - first:
+      213: -4291336851156471420
+    second: Horned Boss Three-Frame Punch_16
+  - first:
+      213: -958731055542634527
+    second: Horned Boss Three-Frame Punch_17
+  - first:
+      213: 5094637395183088007
+    second: Horned Boss Three-Frame Punch_18
+  - first:
+      213: -6429243315610992818
+    second: Horned Boss Three-Frame Punch_19
+  - first:
+      213: -5844247580314041268
+    second: Horned Boss Three-Frame Punch_20
+  - first:
+      213: -5907725531429099332
+    second: Horned Boss Three-Frame Punch_21
+  - first:
+      213: -52375616812106229
+    second: Horned Boss Three-Frame Punch_22
+  - first:
+      213: -4702747880067160509
+    second: Horned Boss Three-Frame Punch_23
+  - first:
+      213: -4369488830261827839
+    second: Horned Boss Three-Frame Punch_24
+  - first:
+      213: 7559099435669961755
+    second: Horned Boss Three-Frame Punch_25
+  - first:
+      213: -120497801969900713
+    second: Horned Boss Three-Frame Punch_26
+  - first:
+      213: 4362138236793229438
+    second: Horned Boss Three-Frame Punch_27
+  - first:
+      213: -1594516404641592223
+    second: Horned Boss Three-Frame Punch_28
+  - first:
+      213: 1013429800151788107
+    second: Horned Boss Three-Frame Punch_29
+  - first:
+      213: 2107647750997392098
+    second: Horned Boss Three-Frame Punch_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 564
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9557b85ad75019900800000000000000
+      internalID: 689338255170827609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_1
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 0
+        width: 864
+        height: 698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dcb37b5a7e9ceb90800000000000000
+      internalID: -7211214654969496364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_2
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 661
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45d41e013f6788460800000000000000
+      internalID: 7244170786957774164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_3
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 644
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 600b8dffd9e5527b0800000000000000
+      internalID: -5249685757935177722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_4
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 644
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 303036ccb20aa0e20800000000000000
+      internalID: 3317640185484870403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_5
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 659
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20322cf08f2e45840800000000000000
+      internalID: 5212040223818654466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_6
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 0
+        width: 641
+        height: 704
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8390b0637b8361190800000000000000
+      internalID: -7992138129185502920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_7
+      rect:
+        serializedVersion: 2
+        x: 1532
+        y: 580
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19118ed6ad36bbb60800000000000000
+      internalID: 7762908172501127569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_8
+      rect:
+        serializedVersion: 2
+        x: 2009
+        y: 594
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f63a64ee11ff0650800000000000000
+      internalID: 6201440326895941364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_9
+      rect:
+        serializedVersion: 2
+        x: 2059
+        y: 568
+        width: 30
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b4eac41d01b92e90800000000000000
+      internalID: -7049909071930268496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_10
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 542
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12a36949541c14260800000000000000
+      internalID: 7080152593792907809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_11
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 550
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8bf75ca4ebd057c0800000000000000
+      internalID: -4084523086834566258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_12
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 530
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8781862cba9f04c40800000000000000
+      internalID: 5494666061488330872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_13
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 520
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b79c881ae727bda0800000000000000
+      internalID: -5929226498022271056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_14
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 500
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5288b4f4db80e7190800000000000000
+      internalID: -7962917481972266971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_15
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 500
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f05567facafe08b0800000000000000
+      internalID: -5183930371415912206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_16
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 509
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 481764fcedb1274c0800000000000000
+      internalID: -4291336851156471420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_17
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 500
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e7fe3f3f27e1b2f0800000000000000
+      internalID: -958731055542634527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_18
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 480
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7813f47e7b9c3b640800000000000000
+      internalID: 5094637395183088007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_19
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 478
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4fb37e944db6c6a0800000000000000
+      internalID: -6429243315610992818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_20
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 490
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4402f33acf05eea0800000000000000
+      internalID: -5844247580314041268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 449
+        width: 17
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb8a9acfdea830ea0800000000000000
+      internalID: -5907725531429099332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_22
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 476
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0eb50d67ace54ff0800000000000000
+      internalID: -52375616812106229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_23
+      rect:
+        serializedVersion: 2
+        x: 2029
+        y: 468
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 346206428bb7cbeb0800000000000000
+      internalID: -4702747880067160509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_24
+      rect:
+        serializedVersion: 2
+        x: 2035
+        y: 472
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 107e4363f057c53c0800000000000000
+      internalID: -4369488830261827839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_25
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 459
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1cb6fc03e057e860800000000000000
+      internalID: 7559099435669961755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_26
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 441
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7536e5533e7e35ef0800000000000000
+      internalID: -120497801969900713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_27
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 393
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7095316d9d698c30800000000000000
+      internalID: 4362138236793229438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_28
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 369
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16c0ec037c32fd9e0800000000000000
+      internalID: -1594516404641592223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_29
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 373
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4aa7daa80d601e00800000000000000
+      internalID: 1013429800151788107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horned Boss Three-Frame Punch_30
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 340
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eab9d5767edf3d10800000000000000
+      internalID: 2107647750997392098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Horned Boss Three-Frame Punch_0: 689338255170827609
+      Horned Boss Three-Frame Punch_1: -7211214654969496364
+      Horned Boss Three-Frame Punch_10: 7080152593792907809
+      Horned Boss Three-Frame Punch_11: -4084523086834566258
+      Horned Boss Three-Frame Punch_12: 5494666061488330872
+      Horned Boss Three-Frame Punch_13: -5929226498022271056
+      Horned Boss Three-Frame Punch_14: -7962917481972266971
+      Horned Boss Three-Frame Punch_15: -5183930371415912206
+      Horned Boss Three-Frame Punch_16: -4291336851156471420
+      Horned Boss Three-Frame Punch_17: -958731055542634527
+      Horned Boss Three-Frame Punch_18: 5094637395183088007
+      Horned Boss Three-Frame Punch_19: -6429243315610992818
+      Horned Boss Three-Frame Punch_2: 7244170786957774164
+      Horned Boss Three-Frame Punch_20: -5844247580314041268
+      Horned Boss Three-Frame Punch_21: -5907725531429099332
+      Horned Boss Three-Frame Punch_22: -52375616812106229
+      Horned Boss Three-Frame Punch_23: -4702747880067160509
+      Horned Boss Three-Frame Punch_24: -4369488830261827839
+      Horned Boss Three-Frame Punch_25: 7559099435669961755
+      Horned Boss Three-Frame Punch_26: -120497801969900713
+      Horned Boss Three-Frame Punch_27: 4362138236793229438
+      Horned Boss Three-Frame Punch_28: -1594516404641592223
+      Horned Boss Three-Frame Punch_29: 1013429800151788107
+      Horned Boss Three-Frame Punch_3: -5249685757935177722
+      Horned Boss Three-Frame Punch_30: 2107647750997392098
+      Horned Boss Three-Frame Punch_4: 3317640185484870403
+      Horned Boss Three-Frame Punch_5: 5212040223818654466
+      Horned Boss Three-Frame Punch_6: -7992138129185502920
+      Horned Boss Three-Frame Punch_7: 7762908172501127569
+      Horned Boss Three-Frame Punch_8: 6201440326895941364
+      Horned Boss Three-Frame Punch_9: -7049909071930268496
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

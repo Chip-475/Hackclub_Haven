@@ -1,0 +1,405 @@
+fileFormatVersion: 2
+guid: 358bbf8135cd58f49b43166c3268a8f9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3010370422907020292
+    second: Echobound Boss Four-Frame Walk Cycle_0
+  - first:
+      213: -8908572583702294164
+    second: Echobound Boss Four-Frame Walk Cycle_1
+  - first:
+      213: -6013970423531540209
+    second: Echobound Boss Four-Frame Walk Cycle_2
+  - first:
+      213: -3144549715651098636
+    second: Echobound Boss Four-Frame Walk Cycle_3
+  - first:
+      213: 4876505616025411540
+    second: Echobound Boss Four-Frame Walk Cycle_4
+  - first:
+      213: -2654496555006797703
+    second: Echobound Boss Four-Frame Walk Cycle_5
+  - first:
+      213: -2718382051118635572
+    second: Echobound Boss Four-Frame Walk Cycle_6
+  - first:
+      213: -4642331823394514856
+    second: Echobound Boss Four-Frame Walk Cycle_7
+  - first:
+      213: -519958282029500918
+    second: Echobound Boss Four-Frame Walk Cycle_8
+  - first:
+      213: -4366257711976337520
+    second: Echobound Boss Four-Frame Walk Cycle_9
+  - first:
+      213: -2886498067547827676
+    second: Echobound Boss Four-Frame Walk Cycle_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Echobound Boss Four-Frame Walk Cycle_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 15
+        width: 570
+        height: 693
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfbd84ccc040936d0800000000000000
+      internalID: -3010370422907020292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Echobound Boss Four-Frame Walk Cycle_1
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 15
+        width: 470
+        height: 701
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6114ac4f646e5480800000000000000
+      internalID: -8908572583702294164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Echobound Boss Four-Frame Walk Cycle_2
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 13
+        width: 564
+        height: 703
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0172bf53c51a8ca0800000000000000
+      internalID: -6013970423531540209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Echobound Boss Four-Frame Walk Cycle_3
+      rect:
+        serializedVersion: 2
+        x: 1607
+        y: 579
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f78f04b1b05c54d0800000000000000
+      internalID: -3144549715651098636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Echobound Boss Four-Frame Walk Cycle_4
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 13
+        width: 528
+        height: 699
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4df546c5504dca340800000000000000
+      internalID: 4876505616025411540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Echobound Boss Four-Frame Walk Cycle_5
+      rect:
+        serializedVersion: 2
+        x: 2091
+        y: 460
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97852558275592bd0800000000000000
+      internalID: -2654496555006797703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Echobound Boss Four-Frame Walk Cycle_6
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 337
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc5a6475ded564ad0800000000000000
+      internalID: -2718382051118635572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Echobound Boss Four-Frame Walk Cycle_7
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 303
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85814118dcf139fb0800000000000000
+      internalID: -4642331823394514856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Echobound Boss Four-Frame Walk Cycle_8
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 258
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a06fb9582bcb8c8f0800000000000000
+      internalID: -519958282029500918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Echobound Boss Four-Frame Walk Cycle_9
+      rect:
+        serializedVersion: 2
+        x: 1629
+        y: 270
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f27df8ebfe763c0800000000000000
+      internalID: -4366257711976337520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Echobound Boss Four-Frame Walk Cycle_10
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 272
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 422d5f60d4911f7d0800000000000000
+      internalID: -2886498067547827676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Echobound Boss Four-Frame Walk Cycle_0: -3010370422907020292
+      Echobound Boss Four-Frame Walk Cycle_1: -8908572583702294164
+      Echobound Boss Four-Frame Walk Cycle_10: -2886498067547827676
+      Echobound Boss Four-Frame Walk Cycle_2: -6013970423531540209
+      Echobound Boss Four-Frame Walk Cycle_3: -3144549715651098636
+      Echobound Boss Four-Frame Walk Cycle_4: 4876505616025411540
+      Echobound Boss Four-Frame Walk Cycle_5: -2654496555006797703
+      Echobound Boss Four-Frame Walk Cycle_6: -2718382051118635572
+      Echobound Boss Four-Frame Walk Cycle_7: -4642331823394514856
+      Echobound Boss Four-Frame Walk Cycle_8: -519958282029500918
+      Echobound Boss Four-Frame Walk Cycle_9: -4366257711976337520
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

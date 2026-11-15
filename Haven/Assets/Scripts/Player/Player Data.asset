@@ -16,5 +16,5 @@ MonoBehaviour:
   atk: 5
   def: 0
   spd: 5
-  jumpForce: 5
+  jumpForce: 7
   dashSpeed: 10
