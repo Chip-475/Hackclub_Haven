@@ -34,6 +34,8 @@ public class PlayerManager : MonoBehaviour, IDamageable
         AudioManager.Instance?.Impact();
         if(Health<=0) Die();
     }
+
+    [ContextMenu("die")]
     public void Die()
     {
         if(IsRespawning || GameplayDirector.Instance==null) return;
